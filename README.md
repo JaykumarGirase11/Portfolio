@@ -2,7 +2,7 @@
 
 Dynamic and interactive personal portfolio showcasing my skills, projects, and experience in Electrical Engineering and Software Development.
 
- ## 🖼️ Preview 
+ ## 🖼️ Preview https://jaykumarportfolio.netlify.app/
 
 ## 📌 About My Portfolio
 
