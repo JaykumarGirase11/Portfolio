@@ -1,0 +1,74 @@
+.perspective {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+  }
+  
+  .group:hover .preserve-3d {
+    transform: rotateY(180deg);
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .badge {
+    display: inline-block;
+    background: linear-gradient(to right, #dbeafe, #e0f2fe);
+    color: #1e40af;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 0.875rem;
+  }
+  
+  .badge:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #93c5fd, #7dd3fc);
+    color: #0c4a6e;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in.delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-fade-in.delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  #particles-light {
+    z-index: 0;
+  }
+  #main-content {
+    position: relative;
+    z-index: 10;
+  }
+  

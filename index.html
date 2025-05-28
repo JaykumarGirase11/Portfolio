@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaykumar's Portfolio</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          // Extend your theme if required
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  
+
+  <!-- AOS (Scroll Animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen font-sans relative overflow-x-hidden bg-gradient-to-br from-[#dbeafe] via-[#e0f2fe] to-[#f0fdfa]">
+ 
+
+
+<!-- ✅ Responsive Navigation Bar Start -->
+<header class="bg-white fixed top-0 left-0 w-full shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-blue-600">Jayfolio</h1>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-blue-600 text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Desktop Navigation -->
+    <nav>
+      <ul class="hidden md:flex space-x-6 text-lg text-gray-800 font-medium">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#education" class="hover:text-blue-600">Education</a></li>
+        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+        <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-blue-50 border-t border-blue-200 shadow-lg px-6 py-4">
+    <ul class="flex flex-col space-y-4 text-center text-gray-800 font-medium">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+<!-- ✅ Navigation End -->
+
+<!-- Spacer to offset fixed header -->
+<div class="h-20 md:h-24"></div>
+
+
+
+  
+      <!-- Hero Section -->
+      <section class="flex flex-col md:flex-row items-center justify-between px-8 py-16 md:py-32 max-w-7xl mx-auto">
+        
+        <!-- Left Content -->
+        <div class="md:w-1/2 text-center md:text-left">
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Hi, I'm <span class="text-blue-600">Jaykumar Girase</span></h1>
+          
+          <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 h-10 mb-6">
+            <span id="typing-text" class="border-r-2 border-blue-600 pr-1"></span>
+          </h2>
+          
+          <p class="text-gray-600 mb-6">Electrical Engineer | Developer | IoT Enthusiast | Innovator</p>
+    
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <a href="assets/Jaykumar CV.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow transition-all duration-300">View Resume</a>
+            <a href="https://linkedin.com/in/jaykumar-girase-874210272" target="_blank" class="bg-gray-800 hover:bg-black text-white px-6 py-2 rounded-full shadow transition-all duration-300">LinkedIn</a>
+            <a href="https://github.com/jaykumargirase11" target="_blank" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-full shadow transition-all duration-300">GitHub</a>
+          </div>
+        </div>
+    
+        <!-- Profile Photo -->
+        <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+          <img src="assets/profile.jpg" alt="Jaykumar Girase" class="w-64 h-64 rounded-full border-8 border-white shadow-lg hover:scale-105 transition-transform duration-500">
+        </div>
+      </section>
+    
+  
+ 
+  <!-- Final Fixed About Me Section -->
+ 
+<!-- About Section -->
+<section id="about" data-aos="fade-up" class="relative z-10 py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 text-white">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Left Side: Description + Boxes -->
+    <div>
+      <h2 class="text-4xl font-bold mb-6 text-white">About Me</h2>
+      <p class="text-lg mb-6 leading-relaxed">
+        👨‍💻 Hi, I'm <span class="font-bold text-blue-400">Jaykumar Girase</span> — an Electrical Engineer, Developer, and Tech Enthusiast who thrives on solving real-world challenges through technology.
+        I specialize in automation, IoT, and smart grid innovations while also diving deep into software development, frontend frameworks, and machine learning.
+        Passionate about open-source, innovation, and constantly pushing boundaries. 🚀
+      </p>
+
+      <!-- My Expertise Card -->
+      <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 mb-6 shadow-lg">
+        <h3 class="text-xl font-bold text-yellow-400 mb-3">My Expertise</h3>
+        <ul class="list-disc list-inside text-gray-200 space-y-1">
+          <li>Frontend Development with Vue.js, React.js, Tailwind</li>
+          <li>Arduino, IoT, and Embedded Systems</li>
+          <li>Machine Learning & Energy Forecasting Projects</li>
+          <li>Graphic & Video Editing (Photoshop, Filmora)</li>
+          <li>Automation & Industrial Tools (PLC, Soldering)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="flex justify-center md:justify-end">
+      <img src="assets/profile1.jpg" alt="Jaykumar Girase"
+        class="w-80 h-80 object-cover rounded-3xl shadow-2xl border-4 border-blue-400 hover:scale-105 transition duration-500" />
+    </div>
+
+  </div>
+</section>
+
+  
+  
+<!-- Education Section -->
+<section id="education" class="bg-[#fef2f2] py-20 px-6 md:px-12 text-center relative z-10">
+
+  <h2 class="text-4xl font-bold mb-10 text-blue-600">Education</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+    <!-- B.Tech Card -->
+    <div class="group perspective">
+      <div class="relative preserve-3d w-full h-72 duration-700 transform-style preserve-3d transition-transform group-hover:rotate-y-180">
+        
+        <!-- Front -->
+       
+        <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+        style="background-image: url('assets/rcpit.png'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+        <div class="flex flex-col items-center justify-center h-full">
+          <h3 class="text-xl font-bold mb-1"> B.Tech - Electrical</h3>
+          <p class="text-sm">RCPIT, Shirpur</p>
+            <p class="text-sm">2022 – Present</p>
+        </div>
+      </div>
+        <!-- Back -->
+        <div class="absolute inset-0 bg-white text-center p-4 rounded-xl rotate-y-180 backface-hidden">
+          <div class="flex flex-col items-center justify-center h-full">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">B.Tech - Electrical</h3>
+            <p class="text-sm text-gray-700 mb-1">Current GPA: 5.50/10</p>
+            <p class="text-sm text-gray-700">Focus: Automation, IoT, Embedded Systems</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HSC Card -->
+    <div class="group perspective">
+      <div class="relative preserve-3d w-full h-72 duration-700 transform-style preserve-3d transition-transform group-hover:rotate-y-180">
+        
+        
+ <!-- Front -->
+       
+ <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+ style="background-image: url('assets/rcpjc.png'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+ <div class="flex flex-col items-center justify-center h-full">
+   <h3 class="text-xl font-bold mb-1"> HSC</h3>
+   <p class="text-sm">RCP Junior College</p>
+     <p class="text-sm">2020 – 2022</p>
+ </div>
+</div>
+        <!-- Back -->
+        <div class="absolute inset-0 bg-white text-center p-4 rounded-xl rotate-y-180 backface-hidden">
+          <div class="flex flex-col items-center justify-center h-full">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">HSC</h3>
+            <p class="text-sm text-gray-700 mb-1">Percentage: 87.40%</p>
+            <p class="text-sm text-gray-700">Stream: Science (Technical Foundation)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SSC Card -->
+    <div class="group perspective">
+      <div class="relative preserve-3d w-full h-72 duration-700 transform-style preserve-3d transition-transform group-hover:rotate-y-180">
+        
+      
+ <!-- Front -->
+       
+ <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+ style="background-image: url('assets/rcpschool.jpeg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+ <div class="flex flex-col items-center justify-center h-full">
+   <h3 class="text-xl font-bold mb-1"> HSC</h3>
+   <p class="text-sm">RCP Secondary school</p>
+     <p class="text-sm">2019 – 2020</p>
+ </div>
+</div>
+        <!-- Back -->
+        <div class="absolute inset-0 bg-white text-center p-4 rounded-xl rotate-y-180 backface-hidden">
+          <div class="flex flex-col items-center justify-center h-full">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">SSC</h3>
+            <p class="text-sm text-gray-700 mb-1">Percentage: 89.40%</p>
+            <p class="text-sm text-gray-700">Interest: Math & Science Excellence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+ <!-- Projects Section with Flip Cards -->
+<section id="projects" class="bg-[#111827] text-white py-20 px-6 md:px-12 text-center relative z-10">
+
+  <h2 class="text-4xl font-bold mb-10 text-blue-600">Projects</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+    <!-- Project 1: Irrigation -->
+    <div class="group perspective">
+      <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+         <!-- Front -->
+         <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/automatic plant.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+          <h3 class="text-xl font-bold mb-1">Automatic Plant Irrigation System </h3>
+         </div>
+       </div>
+       
+        <!-- Back -->
+        <!-- Back -->
+<div class="absolute rotate-y-180 backface-hidden bg-blue-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+  <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+    <li>Built an automated system using soil moisture sensors and a microcontroller to activate pumps when moisture is low.</li>
+    <li>Designed an irrigation setup using Arduino and soil sensors.</li>
+    <li>Monitored soil moisture in real-time.</li>
+    <li>Triggered water pump automatically at low moisture.</li>
+    <li>Optimized water usage and reduced manual work.</li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Project 2: Solar and Wind -->
+    <div class="group perspective">
+      <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+       
+         <!-- Front -->
+         <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/solar and wind tracking.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+           <h3 class="text-xl font-bold mb-1">Solar & Wind Tracking System</h3>
+         </div>
+       </div>
+        <!-- Back -->
+        <!-- Back -->
+<div class="absolute rotate-y-180 backface-hidden bg-pink-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+  <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+    <li>Designed a hybrid renewable system to capture solar and wind energy efficiently.</li>
+    <li>Used sensors to track sunlight and wind direction.</li>
+    <li>Implemented real-time adjustment of solar panels and turbines.</li>
+    <li>Controlled using microcontrollers and responsive coding.</li>
+    <li>Increased energy efficiency and performance.</li>
+  </ul>
+  <a href="https://ijrpr.com/uploads/V5ISSUE11/IJRPR35626.pdf" target="_blank" class="text-pink-600 underline text-sm hover:text-pink-800 mt-2">Read Publication</a>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Project 3: Smart Grid Forecasting -->
+    <div class="group perspective">
+      <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+   
+         <!-- Front -->
+         <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/smart grids.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+           <h3 class="text-xl font-bold mb-1"> Energy Consumption Forecasting for Smart Grids</h3>
+         </div>
+       </div>
+        <!-- Back -->
+       <!-- Back -->
+<div class="absolute rotate-y-180 backface-hidden bg-green-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+  <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+    <li>Developed ML model to predict energy demand in smart grids.</li>
+    <li>Created a dashboard to visualize real-time data and forecast trends.</li>
+    <li>Enabled efficient load balancing and energy optimization.</li>
+    <li>Integrated live fault detection and monitoring system.</li>
+    <li>Enhanced energy management and reduced wastage.</li>
+  </ul>
+  <span class="text-green-600 text-sm italic mt-2">Coming Soon</span>
+</div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Technologies / Skills Section with Flip Cards -->
+  <section id="skills" class="bg-[#e0f2fe] py-20 px-6 md:px-12 text-center relative z-10">
+
+    <h2 class="text-4xl font-bold mb-10 text-blue-600">Technologies & Tools</h2>
+  
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+  
+      <!-- Card 1: Programming Languages -->
+      <div class="group perspective">
+        <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+          
+        
+         <!-- Front -->
+         <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/programing.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+          <h3 class="text-xl font-bold mb-1">Programming Languages </h3>
+         </div>
+       </div>
+          <!-- Back -->
+          <div class="absolute rotate-y-180 backface-hidden bg-blue-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+            <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+                <li><strong>C++</strong> (Programming Language)</li>
+                <li><strong>C</strong> (Programming Language)</li>
+                <li><strong>Java</strong> (Programming Language)</li>
+                <li><strong>Python</strong> (Programming Language)</li>
+                <li><strong>Vue.js</strong> (Frontend Framework)</li>
+                <li><strong>React.js</strong> (Frontend Library)</li>
+                <li><strong>Jupyter Notebook</strong> (Data Science Tool)</li>
+              </ul>
+              
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2: Development Tools -->
+      <div class="group perspective">
+        <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+          
+           <!-- Front -->
+         <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/devlopment.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+          <h3 class="text-xl font-bold mb-1">Development Tools </h3>
+         </div>
+       </div>
+          <!-- Back -->
+          <div class="absolute rotate-y-180 backface-hidden bg-green-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+            <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+                <li><strong>Arduino IDE</strong> (Embedded Programming)</li>
+                <li><strong>Visual Studio Code</strong> (Code Editor)</li>
+                <li><strong>Photoshop</strong> (Graphic Design Tool)</li>
+                <li><strong>Filmora</strong> (Video Editing Tool)</li>
+                <li><strong>PLC</strong> (Industrial Automation)</li>
+              </ul>
+              
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3: Hardware Tools -->
+      <div class="group perspective">
+        <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+          <!-- Front -->
+          <div class="absolute backface-hidden bg-white border-2 border-yellow-300 rounded-xl shadow-md p-6 flex items-center justify-center h-full">
+            <h3 class="text-xl font-bold text-yellow-700">Hardware Tools</h3>
+          </div>
+           <!-- Front -->
+         <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/hardware.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+          <h3 class="text-xl font-bold mb-1">Hardware Tools</h3>
+         </div>
+       </div>
+          <!-- Back -->
+          <div class="absolute rotate-y-180 backface-hidden bg-yellow-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+            <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+                <li><strong>Soldering</strong> (Hardware Skill)</li>
+                <li><strong>DMM</strong> (Digital Multimeter)</li>
+                <li><strong>IoT</strong> (Internet of Things)</li>
+              </ul>
+              
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Achievements Section -->
+<section id="achievements" class="bg-[#111827] text-white py-20 px-6 md:px-12 text-center relative z-10">
+
+    <h2 class="text-4xl font-bold mb-10 text-blue-600">Achievements</h2>
+  
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+  
+      <!-- Card 1: Toy Making -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transform transition duration-500 hover:scale-105 animate-fade-in">
+        <div class="text-5xl text-yellow-500 mb-4">🧸</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Electric Toy Making Competition</h3>
+        <p class="text-sm text-gray-600">1st Place at RCPIT - Feb 2025</p>
+      </div>
+  
+      <!-- Card 2: German Certification -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transform transition duration-500 hover:scale-105 animate-fade-in delay-100">
+        <div class="text-5xl text-blue-500 mb-4">🇩🇪</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">German Language A1</h3>
+        <p class="text-sm text-gray-600">Cleared Goethe-Zertifikat A1 - Feb 2025</p>
+      </div>
+  
+      <!-- Card 3: Robo Racing -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transform transition duration-500 hover:scale-105 animate-fade-in delay-200">
+        <div class="text-5xl text-red-500 mb-4">🤖</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Robo Racing</h3>
+        <p class="text-sm text-gray-600">1st Runner Up - COEM Jalgaon, Feb 2024</p>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Experience Section -->
+  <section id="experience" class="bg-[#fef2f2] py-20 px-6 md:px-12 text-center relative z-10">
+
+    <h2 class="text-4xl font-bold mb-10 text-blue-600">Experience</h2>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+  
+      <!-- Internship 1: STEMSAGE TECHWORLD -->
+      <div class="group perspective">
+        <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+          <!-- Front -->
+          <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/stem.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+          <h3 class="text-xl font-bold mb-1">Stem Educator Intern </h3>
+         </div>
+       </div>
+          <!-- Back -->
+          <div class="absolute rotate-y-180 backface-hidden bg-green-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+            <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+              <li>Intern at STEMSAGE TECHWORLD LLP (May – Aug 2024)</li>
+              <li>Led Arduino and electronics workshops for students.</li>
+              <li>Designed and delivered hands-on robotics & IoT sessions.</li>
+              <li>Created media content and training guides for STEM topics.</li>
+              <li>Engaged school students through interactive STEM learning modules.</li>
+            </ul>
+            <span class="text-green-600 text-sm italic mt-2">Status: Completed</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Internship 2: Unified Mentor -->
+      <div class="group perspective">
+        <div class="relative preserve-3d group-hover:rotate-y-180 duration-700 w-full h-64">
+          <!-- Front -->
+          
+          <div class="absolute inset-0 bg-cover bg-center text-white p-4 rounded-xl backface-hidden"
+         style="background-image: url('assets/data.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.5);">
+         <div class="flex flex-col items-center justify-center h-full">
+          <h3 class="text-xl font-bold mb-1">Data Analyst Intern </h3>
+         </div>
+       </div>
+          <!-- Back -->
+          <div class="absolute rotate-y-180 backface-hidden bg-indigo-100 rounded-xl shadow-md p-6 h-full flex flex-col justify-center items-center overflow-auto">
+            <ul class="text-sm text-gray-800 text-left list-disc pl-4 space-y-1">
+              <li>Intern at Unified Mentor Pvt. Ltd. (June – Sept 2025)</li>
+              <li>Ongoing internship focused on data analytics and reporting.</li>
+              <li>Learning data cleaning, analysis, and visualization tools.</li>
+              <li>Working on real-time datasets and client-based reporting tasks.</li>
+              <li>Collaborating remotely under mentorship to explore industry-level datasets.</li>
+            </ul>
+            <span class="text-indigo-600 text-sm italic mt-2">Status: Ongoing</span>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  
+  <!-- 📬 Contact Section - Box Style -->
+<section id="contact" class="py-20 flex justify-center items-center bg-gradient-to-br from-indigo-900 via-blue-900 to-black text-white">
+  <div class="w-full max-w-2xl px-6">
+    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-gray-300/30 shadow-lg hover:shadow-blue-400 transition-all duration-300">
+      <h2 class="text-4xl font-bold text-blue-400 mb-4 text-center">📩 Get in Touch</h2>
+      <p class="text-gray-300 mb-6 text-center">I'd love to hear from you. Let's build something amazing together!</p>
+
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/myzwekyj" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:ring-2 focus:ring-blue-400">
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:ring-2 focus:ring-blue-400">
+        <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:ring-2 focus:ring-blue-400"></textarea>
+        <button type="submit" class="w-full py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transform hover:scale-105 transition-all duration-300">
+          Send 🚀
+        </button>
+      </form>
+
+     
+</section>
+
+  
+   <!-- Footer Section (Placeholder) -->
+   <footer class="bg-gray-800 p-4 text-center text-white">
+    <p>&copy;  Designed & Built by Jaykumar Girase ❤️</p>
+  </footer>
+
+<!-- Smooth Scroll Script -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Close menu if clicked outside (optional)
+  document.addEventListener("click", (e) => {
+    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+</script>
+<script>
+  tsParticles.load("particles-light", {
+    background: { color: { value: "transparent" } },
+    fpsLimit: 60,
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        repulse: { distance: 100 },
+        push: { quantity: 4 }
+      }
+    },
+    particles: {
+      color: { value: "#1D4ED8" },
+      links: {
+        color: "#3B82F6",
+        distance: 120,
+        enable: true,
+        opacity: 0.4,
+        width: 1
+      },
+      collisions: { enable: false },
+      move: { enable: true, speed: 2, outModes: "bounce" },
+      number: { value: 60, density: { enable: true, area: 800 } },
+      opacity: { value: 0.5 },
+      shape: { type: "circle" },
+      size: { value: { min: 1, max: 4 } }
+    },
+    detectRetina: true
+  });
+  </script>
+  
+  
+
+
+
+
+
+ 
+
+
+
+
+<!-- Other JS (if any) -->
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>
