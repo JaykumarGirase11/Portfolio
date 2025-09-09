@@ -1,74 +1,168 @@
-.perspective {
-    perspective: 1000px;
-  }
-  
-  .preserve-3d {
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-  }
-  
-  .group:hover .preserve-3d {
-    transform: rotateY(180deg);
-  }
-  
-  .backface-hidden {
-    backface-visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-  .badge {
-    display: inline-block;
-    background: linear-gradient(to right, #dbeafe, #e0f2fe);
-    color: #1e40af;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
-    font-size: 0.875rem;
-  }
-  
-  .badge:hover {
-    transform: scale(1.1);
-    background: linear-gradient(to right, #93c5fd, #7dd3fc);
-    color: #0c4a6e;
-  }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-fade-in {
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-  }
-  
-  .animate-fade-in.delay-100 {
-    animation-delay: 0.1s;
-  }
-  
-  .animate-fade-in.delay-200 {
-    animation-delay: 0.2s;
-  }
+/* Dark Neon Portfolio Styles - Exact Match */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-  #particles-light {
-    z-index: 0;
+/* Global Dark Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0a0e1a 0%, #060b14 50%, #000000 100%);
+}
+
+/* Dark Particles Background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(135deg, #0a0e1a 0%, #060b14 50%, #000000 100%);
+}
+
+#particles-js canvas {
+  opacity: 1 !important;
+}
+
+/* EXACT Blue Ring Effects - Reference Match */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Perfect Circular Sizes for Photo */
+.w-76 { width: 19rem; }
+.h-76 { height: 19rem; }
+.w-88 { width: 22rem; }
+.h-88 { height: 22rem; }
+.w-92 { width: 23rem; }
+.h-92 { height: 23rem; }
+.w-104 { width: 26rem; }
+.h-104 { height: 26rem; }
+.w-108 { width: 27rem; }
+.h-108 { height: 27rem; }
+
+/* Enhanced Blue Glow Effects */
+@keyframes perfectGlow {
+  0% {
+    box-shadow: 0 0 30px #00d4ff, 0 0 60px #00d4ff, 0 0 90px #00d4ff;
+    transform: scale(1);
   }
-  #main-content {
-    position: relative;
-    z-index: 10;
+  50% {
+    box-shadow: 0 0 50px #00d4ff, 0 0 100px #00d4ff, 0 0 150px #00d4ff;
+    transform: scale(1.02);
   }
-  
+  100% {
+    box-shadow: 0 0 30px #00d4ff, 0 0 60px #00d4ff, 0 0 90px #00d4ff;
+    transform: scale(1);
+  }
+}
+
+/* Neon Glow Animations */
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+    filter: brightness(1);
+  }
+  100% {
+    box-shadow: 0 0 40px #00d4ff, 0 0 80px #00d4ff;
+    filter: brightness(1.2);
+  }
+}
+
+.animate-glow {
+  animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+/* Enhanced Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-fade-in { animation: fadeInUp 0.8s ease forwards; opacity: 0; }
+
+/* 3D Flip Cards */
+.perspective { perspective: 1000px; }
+.preserve-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.group:hover .preserve-3d { transform: rotateY(180deg); }
+.backface-hidden {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.rotate-y-180 { transform: rotateY(180deg); }
+
+/* Navigation Links */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 0; height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #8b5cf6);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Dark Form Styles */
+input, textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: white;
+}
+input:focus, textarea:focus {
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .animate-glow { animation: none; }
+  .preserve-3d { transform: none !important; }
+  .group:hover .preserve-3d { transform: none !important; }
+}
+
+/* Z-index Management */
+#particles-js { z-index: 0; }
+#main-content { position: relative; z-index: 10; }
+.fixed { z-index: 50; }
+
+/* Custom Dark Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0e1a; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00d4ff, #8b5cf6);
+  border-radius: 4px;
+}
